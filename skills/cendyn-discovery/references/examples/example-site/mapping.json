@@ -1,0 +1,249 @@
+{
+  "site": "example-site",
+  "admin_base": "https://<site>/admin",
+  "modules_seen_in_sidebar": [
+    "rooms",
+    "acm (channel)",
+    "history",
+    "blog",
+    "careers",
+    "spe",
+    "pdf",
+    "events",
+    "forms",
+    "faq",
+    "gallery",
+    "ipool",
+    "languages",
+    "lightboxes"
+  ],
+  "modules_note": "Illustrative. Only 'rooms' was probed to build this example; confirm module paths with discovery step 1.",
+  "section_library_titles": [
+    "ACM Map and List Toggle",
+    "3 Column Bullet List",
+    "ACM Two Col Map",
+    "ACM Zigzag Two Col",
+    "Additional Content",
+    "Breadcrumb Bar",
+    "Contact Info + Form",
+    "Full Screen Feature Slider",
+    "Full Screen Feature",
+    "Full Screen Slider Image Only",
+    "Info Section - Two Images + Content",
+    "Intro Text Block",
+    "Map Section",
+    "Menu Tabs",
+    "Offer Slider",
+    "Private Homes Two Col Intro",
+    "Room Slider",
+    "Social Feed Grid",
+    "Three Column Card",
+    "Timeline / History Slider",
+    "Two Column Intro with Hours + Contact",
+    "ACM Newsletter",
+    "Offer Features",
+    "Room Amenities - Image Override",
+    "Room Details - 3 Column Bullet List",
+    "ACM Similar Rooms",
+    "ACM Venue Amenities",
+    "ACM Venues Hours",
+    "Alert Bar",
+    "Hamburger Navigation Right Side Image",
+    "Similar offers slider"
+  ],
+  "import_allowed_section_ids_rooms": [
+    "32",
+    "35",
+    "36",
+    "34",
+    "25",
+    "21",
+    "18",
+    "15",
+    "16",
+    "39",
+    "9",
+    "17",
+    "14",
+    "37",
+    "11",
+    "33",
+    "13",
+    "12",
+    "3",
+    "10",
+    "19",
+    "20"
+  ],
+  "sections": {
+    "33": {
+      "title": "Private Homes Two Col Intro",
+      "elements": [
+        {
+          "suffix": "[elements][153]",
+          "role": "copy",
+          "label": "page name heading",
+          "content_key": "section_title",
+          "format": "text"
+        },
+        {
+          "suffix": "[elements][154]",
+          "role": "empty"
+        },
+        {
+          "suffix": "[elements][155]",
+          "role": "copy",
+          "label": "intro",
+          "content_key": "intro",
+          "format": "html"
+        },
+        {
+          "suffix": "[elements][156]",
+          "role": "link",
+          "label": "Toll Free phone"
+        },
+        {
+          "suffix": "[elements][157]",
+          "role": "link",
+          "label": "Direct Line phone"
+        }
+      ]
+    },
+    "15": {
+      "title": "Room details: spec badges + amenities CTA",
+      "rows": {
+        "[elements][158]": 4
+      },
+      "elements": [
+        {
+          "suffix": "[elements][158][row_{n}][elements][160][image_id]",
+          "role": "icon",
+          "label": "bed glyph, shared id 31"
+        },
+        {
+          "suffix": "[elements][158][row_{n}][elements][161]",
+          "role": "copy",
+          "label": "badge text",
+          "content_key": "badges[n]",
+          "format": "text"
+        },
+        {
+          "suffix": "[elements][162]",
+          "role": "keep",
+          "label": "Amenities heading"
+        },
+        {
+          "suffix": "[elements][163]",
+          "role": "link",
+          "label": "Inquire Now mailto"
+        }
+      ]
+    },
+    "34": {
+      "title": "Full Screen Feature Slider",
+      "rows": {
+        "[elements][77]": 4
+      },
+      "elements": [
+        {
+          "suffix": "[elements][77][row_{n}][elements][79][image_id]",
+          "role": "image",
+          "label": "slide photo",
+          "content_key": "slides[n]",
+          "format": "image_id"
+        },
+        {
+          "suffix": "[elements][77][row_{n}][elements][80]",
+          "role": "empty"
+        },
+        {
+          "suffix": "[elements][77][row_{n}][elements][81]",
+          "role": "empty"
+        },
+        {
+          "suffix": "[elements][77][row_{n}][elements][82]",
+          "role": "empty"
+        },
+        {
+          "suffix": "[elements][77][row_{n}][elements][83]",
+          "role": "empty",
+          "label": "slide link"
+        },
+        {
+          "suffix": "[elements][84]",
+          "role": "keep",
+          "label": "background-primary class"
+        }
+      ]
+    },
+    "35": {
+      "title": "Grid: heading + body cards",
+      "rows": {
+        "[elements][164]": 5
+      },
+      "elements": [
+        {
+          "suffix": "[elements][164][row_{n}][elements][166][image_id]",
+          "role": "empty"
+        },
+        {
+          "suffix": "[elements][164][row_{n}][elements][167]",
+          "role": "copy",
+          "label": "card heading",
+          "content_key": "cards[n].heading",
+          "format": "text",
+          "note": "rows 0-2 page-specific; rows 3-4 are site-wide services -> keep"
+        },
+        {
+          "suffix": "[elements][164][row_{n}][elements][168]",
+          "role": "copy",
+          "label": "card body",
+          "content_key": "cards[n].body",
+          "format": "html"
+        }
+      ]
+    },
+    "14": {
+      "title": "Amenities and Location",
+      "elements": [
+        {
+          "suffix": "[elements][170]",
+          "role": "keep",
+          "label": "section heading"
+        },
+        {
+          "suffix": "[elements][172]",
+          "role": "copy",
+          "content_key": "amenities_1",
+          "format": "ul"
+        },
+        {
+          "suffix": "[elements][173]",
+          "role": "copy",
+          "content_key": "amenities_2",
+          "format": "ul"
+        },
+        {
+          "suffix": "[elements][174]",
+          "role": "copy",
+          "content_key": "amenities_3",
+          "format": "ul"
+        },
+        {
+          "suffix": "[elements][199]",
+          "role": "empty"
+        },
+        {
+          "suffix": "[elements][74]",
+          "role": "keep",
+          "label": "Our Location heading"
+        },
+        {
+          "suffix": "[elements][75]",
+          "role": "empty"
+        }
+      ]
+    }
+  },
+  "_note": "Section ids and element suffixes are illustrative: they come from one real site's section library. Run cendyn-discovery to map your own."
+}

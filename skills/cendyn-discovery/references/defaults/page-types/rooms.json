@@ -1,0 +1,582 @@
+{
+  "page_type": "rooms",
+  "module": "rooms",
+  "endpoints": {
+    "index": "/admin/rooms",
+    "create": "/admin/rooms/create",
+    "edit": "/admin/rooms/edit/id/{id}",
+    "categories": "/admin/rooms",
+    "room_types": "/admin/rooms",
+    "page_attributes": "/admin/rooms"
+  },
+  "form_selector": "#edit-room",
+  "total_form_fields": 242,
+  "page_level_fields": [
+    {
+      "name": "categories[]",
+      "type": "checkbox",
+      "role": "copy",
+      "values": [
+        {
+          "value": "1",
+          "label": "Rooms"
+        },
+        {
+          "value": "2",
+          "label": "Suites"
+        },
+        {
+          "value": "3",
+          "label": "Accessible"
+        }
+      ],
+      "note": "Room 1: Rooms checked. Room 2: Rooms checked. Varies per room."
+    },
+    {
+      "name": "type_id",
+      "type": "select",
+      "role": "copy",
+      "options": [
+        {
+          "value": "",
+          "label": "Please Select"
+        },
+        {
+          "value": "1",
+          "label": "Rooms"
+        },
+        {
+          "value": "2",
+          "label": "Suites"
+        }
+      ]
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "role": "copy",
+      "note": "Room name, differs per room"
+    },
+    {
+      "name": "h1",
+      "type": "text",
+      "role": "copy",
+      "note": "Page H1, differs per room"
+    },
+    {
+      "name": "h2",
+      "type": "text",
+      "role": "copy",
+      "note": "Page H2 / subtitle, differs per room"
+    },
+    {
+      "name": "slug",
+      "type": "text",
+      "role": "copy",
+      "note": "URL slug, differs per room"
+    },
+    {
+      "name": "roomcode",
+      "type": "text",
+      "role": "copy",
+      "note": "Booking engine room code. Empty on both template rooms."
+    },
+    {
+      "name": "descr_short",
+      "type": "textarea",
+      "role": "copy",
+      "note": "Short description / intro text, differs per room"
+    },
+    {
+      "name": "filename",
+      "type": "hidden",
+      "role": "image",
+      "note": "Hero image path. Populated via image picker UI, not direct text entry."
+    },
+    {
+      "name": "floor_image[image_id]",
+      "type": "text",
+      "role": "image",
+      "note": "Floor plan image ID. Empty on template."
+    },
+    {
+      "name": "floor_image[cropping]",
+      "type": "hidden",
+      "role": "keep",
+      "note": "Cropping data for floor plan image"
+    },
+    {
+      "name": "floor_image[focal_point]",
+      "type": "hidden",
+      "role": "keep",
+      "note": "Focal point data for floor plan image"
+    },
+    {
+      "name": "descr",
+      "type": "textarea",
+      "role": "copy",
+      "note": "Full description. Rich text with HTML. Differs per room."
+    },
+    {
+      "name": "meta_title",
+      "type": "text",
+      "role": "copy",
+      "note": "SEO meta title. Empty on both template rooms."
+    },
+    {
+      "name": "meta_desc",
+      "type": "textarea",
+      "role": "copy",
+      "note": "SEO meta description. Empty on both."
+    },
+    {
+      "name": "meta_keywords",
+      "type": "textarea",
+      "role": "copy",
+      "note": "SEO meta keywords. Empty on both."
+    },
+    {
+      "name": "omniture",
+      "type": "textarea",
+      "role": "copy",
+      "note": "Omniture tracking code. Empty on both."
+    },
+    {
+      "name": "meta_robots",
+      "type": "select",
+      "role": "keep",
+      "default_value": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "index, follow, noodp, noydir"
+        },
+        {
+          "value": "0",
+          "label": "noindex, nofollow"
+        },
+        {
+          "value": "3",
+          "label": "index, nofollow"
+        },
+        {
+          "value": "2",
+          "label": "noindex, follow"
+        }
+      ],
+      "note": "Same default (1) on both rooms"
+    },
+    {
+      "name": "hidden_from_sitemap",
+      "type": "checkbox",
+      "role": "keep",
+      "hidden_default": "0",
+      "checkbox_value": "1",
+      "note": "Hidden input=0 + checkbox=1 pattern. Unchecked on both rooms."
+    },
+    {
+      "name": "meta_canonical_landing",
+      "type": "select",
+      "role": "keep",
+      "default_value": "self",
+      "note": "Options include page URLs and 'Use Default Page'. Same default on both."
+    },
+    {
+      "name": "schema",
+      "type": "textarea",
+      "role": "copy",
+      "note": "JSON-LD schema markup. Empty on both."
+    },
+    {
+      "name": "tags[]",
+      "type": "select",
+      "role": "copy",
+      "note": "Tag multi-select. Dynamic options."
+    },
+    {
+      "name": "thumbnail[image_id]",
+      "type": "text",
+      "role": "image",
+      "note": "Thumbnail image ID for listings."
+    },
+    {
+      "name": "thumbnail[cropping]",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "thumbnail[focal_point]",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "use_inherit_ti",
+      "type": "radio",
+      "role": "keep",
+      "options": [
+        {
+          "value": "1",
+          "label": "Use Hero Image"
+        },
+        {
+          "value": "0",
+          "label": "Use Custom Thumbnail"
+        }
+      ],
+      "note": "Whether to inherit thumbnail from hero. Same default on both."
+    },
+    {
+      "name": "extlink",
+      "type": "text",
+      "role": "copy",
+      "note": "External booking link (desktop). Room 1 has value, Room 2 empty."
+    },
+    {
+      "name": "extlinkmob",
+      "type": "text",
+      "role": "copy",
+      "note": "External booking link (mobile). Room 1 has value, Room 2 empty."
+    },
+    {
+      "name": "link",
+      "type": "text",
+      "role": "copy",
+      "note": "Internal page link. Room 1: /special-offers, Room 2: empty."
+    },
+    {
+      "name": "linkBtn",
+      "type": "hidden",
+      "role": "keep",
+      "value": "Browse Pages"
+    },
+    {
+      "name": "link_title",
+      "type": "text",
+      "role": "copy",
+      "note": "Link title text. Room 1 has value, Room 2 empty."
+    },
+    {
+      "name": "linkmob",
+      "type": "text",
+      "role": "copy",
+      "note": "Mobile link. Empty on both."
+    },
+    {
+      "name": "linkmobBtn",
+      "type": "hidden",
+      "role": "keep",
+      "value": "Browse Pages"
+    },
+    {
+      "name": "linkmob_title",
+      "type": "text",
+      "role": "copy",
+      "note": "Mobile link title. Empty on both."
+    },
+    {
+      "name": "price_enabled",
+      "type": "radio",
+      "role": "copy",
+      "options": [
+        {
+          "value": "1",
+          "label": "Enable"
+        },
+        {
+          "value": "0",
+          "label": "Disable"
+        }
+      ],
+      "note": "Room 1: enabled (1). Room 2: disabled (0)."
+    },
+    {
+      "name": "price_prefix",
+      "type": "hidden",
+      "role": "copy",
+      "note": "Populated via price widget. Room 1: 'From', Room 2: empty."
+    },
+    {
+      "name": "price_set_prefix",
+      "type": "text",
+      "role": "copy",
+      "note": "Price prefix display text. Room 1: 'From', Room 2: empty."
+    },
+    {
+      "name": "price_set_copy",
+      "type": "text",
+      "role": "copy",
+      "note": "Price amount. Room 1: '189', Room 2: empty."
+    },
+    {
+      "name": "price_set_suffix",
+      "type": "text",
+      "role": "copy",
+      "note": "Price suffix. Room 1: 'per night', Room 2: empty."
+    },
+    {
+      "name": "price_set",
+      "type": "hidden",
+      "role": "keep",
+      "note": "Composite hidden field. Auto-populated from prefix/copy/suffix."
+    },
+    {
+      "name": "currency_copy",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "currency_append",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "currency_set_copy",
+      "type": "text",
+      "role": "copy",
+      "note": "Currency symbol override. Empty on both."
+    },
+    {
+      "name": "currency_set_append",
+      "type": "radio",
+      "role": "keep",
+      "options": [
+        {
+          "value": "1",
+          "label": "Prepend"
+        },
+        {
+          "value": "0",
+          "label": "Append"
+        }
+      ],
+      "note": "Same default (0/append) on both."
+    },
+    {
+      "name": "currency_set",
+      "type": "hidden",
+      "role": "keep",
+      "note": "Composite hidden field"
+    },
+    {
+      "name": "price_copy",
+      "type": "hidden",
+      "role": "keep",
+      "note": "Hidden duplicate of price_set_copy. Auto-synced."
+    },
+    {
+      "name": "price_suffix",
+      "type": "hidden",
+      "role": "keep",
+      "note": "Hidden duplicate of price_set_suffix. Auto-synced."
+    },
+    {
+      "name": "price_link",
+      "type": "text",
+      "role": "copy",
+      "note": "Price link URL. Room 1: /press-room, Room 2: empty."
+    },
+    {
+      "name": "price_link_btn",
+      "type": "hidden",
+      "role": "keep",
+      "value": "Browse Pages"
+    },
+    {
+      "name": "layout",
+      "type": "select",
+      "role": "keep",
+      "default_value": "",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "default",
+          "label": "Template 1-1"
+        },
+        {
+          "value": "template-1-1",
+          "label": "Template 1-1"
+        },
+        {
+          "value": "template-1-2",
+          "label": "Template 1-2"
+        }
+      ],
+      "note": "Page layout template. Default on both rooms."
+    },
+    {
+      "name": "featured",
+      "type": "checkbox",
+      "role": "keep",
+      "hidden_default": "0",
+      "checkbox_value": "1",
+      "note": "Featured flag. Unchecked on both rooms."
+    },
+    {
+      "name": "speRuleIds",
+      "type": "select",
+      "role": "keep",
+      "default_value": "0",
+      "options": [
+        {
+          "value": "0",
+          "label": "All Visitors"
+        }
+      ],
+      "note": "Content personalization audience. Same default on both."
+    },
+    {
+      "name": "speMatch",
+      "type": "hidden",
+      "role": "keep",
+      "value": "OR"
+    },
+    {
+      "name": "published",
+      "type": "checkbox",
+      "role": "copy",
+      "hidden_default": "0",
+      "checkbox_value": "1",
+      "note": "Room 1: checked (published). Room 2: unchecked (draft)."
+    }
+  ],
+  "features": {
+    "description": "Features and amenities toggle list. Each feature is a hidden+checkbox pair or a text input.",
+    "field_pattern": "features[{feature_db_id}][feature_{feature_db_id}]",
+    "role": "copy",
+    "note": "Feature ids are per site. List them from the create form.",
+    "checkbox_features": [],
+    "text_features": []
+  },
+  "gallery": {
+    "description": "Sortable image gallery. Each item has image_id, image_name, caption, url, cropping, focal_point.",
+    "field_pattern": "gallery[{id}][{field}]",
+    "fields_per_item": [
+      "image_id",
+      "image_name",
+      "caption",
+      "url",
+      "cropping",
+      "focal_point"
+    ],
+    "role": "copy",
+    "note": "Room 1 has 3 gallery images. Room 2 has 0. Items added/removed via UI."
+  },
+  "layout_sections": {
+    "description": "Optional layout sections on the Layout tab. Per-page, not imported. Hashes are unique per section instance per page.",
+    "note": "Layout sections are optional per page.",
+    "template_sections": [
+      {
+        "section_id": 23,
+        "hash": "6ac9aa0f75b7b",
+        "note": "Hash is page-specific, will differ on new pages",
+        "elements": [
+          {
+            "suffix": "[elements][125]",
+            "type": "text",
+            "role": "copy",
+            "template_value": "Overline Text"
+          },
+          {
+            "suffix": "[elements][126]",
+            "type": "text",
+            "role": "copy",
+            "template_value": "Section Title"
+          },
+          {
+            "suffix": "[elements][127]",
+            "type": "textarea",
+            "role": "copy",
+            "template_value": "Bullet list HTML"
+          },
+          {
+            "suffix": "[elements][128]",
+            "type": "textarea",
+            "role": "copy",
+            "template_value": "Bullet list HTML"
+          },
+          {
+            "suffix": "[elements][129]",
+            "type": "textarea",
+            "role": "copy",
+            "template_value": "Bullet list HTML"
+          }
+        ],
+        "settings": [
+          "speMatch",
+          "speRuleIds"
+        ]
+      },
+      {
+        "section_id": 24,
+        "hash": "6ac9aa0f790bc",
+        "note": "Hash is page-specific",
+        "elements": [
+          {
+            "suffix": "[elements][130]",
+            "type": "text",
+            "role": "empty",
+            "template_value": ""
+          }
+        ],
+        "note_2": "Single image element, empty on template"
+      }
+    ],
+    "available_layout_section_ids": [
+      22,
+      23,
+      24
+    ],
+    "note_2": "Layout section IDs 22-24 are system/layout-only sections not in ACM channel index."
+  },
+  "content_sections": {
+    "import": {
+      "supported": true,
+      "button_selector": ".js-open-popup-import",
+      "importable_section_ids": [
+        25,
+        21,
+        18,
+        15,
+        16,
+        9,
+        17,
+        14,
+        11,
+        13,
+        12,
+        3,
+        10,
+        19,
+        20
+      ],
+      "note": "15 ACM section templates can be imported. Room 1 has 0 imported sections. Room 2 has 0."
+    },
+    "template_sections": [],
+    "note": "No imported content sections on either template room. Sections are added per-page as needed."
+  },
+  "tabs": [
+    "Copy",
+    "Sections",
+    "Layout",
+    "Features/Amenities",
+    "SEO/Meta",
+    "Images",
+    "Links",
+    "Price",
+    "Settings",
+    "Attributes",
+    "Versions",
+    "Your Drafts"
+  ],
+  "assumptions": [
+    "Element ids in layout sections and layout section hashes are page-specific; new pages get different ones",
+    "Gallery items are added through the UI; the profile records the field structure, not fixed ids",
+    "The 'filename' field (hero image) is set through the image picker, not text entry",
+    "Layout sections and gallery images are optional per page",
+    "Feature ids are per site: list them from the create form"
+  ],
+  "_note": "Default Cendyn CMS reference (v.11.4), derived from a demo site and cross-checked against one production site. Copy this folder to content-jobs/<site>/ and verify per site. page_level_fields confirmed on a production site (all present except rooms type_id, which is optional per site). Feature ids and section hashes are per site."
+}

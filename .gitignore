@@ -1,0 +1,6 @@
+# Real site folders live outside the repo (../../content-jobs). Block strays.
+content-jobs/
+profiles/
+*.csv
+!skills/migration-log/templates/site-folder/migration-log.csv
+auth.json

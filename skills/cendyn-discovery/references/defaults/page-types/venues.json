@@ -1,0 +1,457 @@
+{
+  "page_type": "venues",
+  "module": "venues",
+  "endpoints": {
+    "index": "/admin/venues",
+    "create": "/admin/venues/create",
+    "edit": "/admin/venues/edit/id/{id}"
+  },
+  "form_selector": "#edit-room",
+  "form_note": "Venues reuse the same form ID as rooms (#edit-room)",
+  "total_form_fields": 250,
+  "page_level_fields": [
+    {
+      "name": "categories[]",
+      "type": "checkbox",
+      "role": "copy",
+      "values": [
+        {
+          "value": "4",
+          "label": "Category 1"
+        },
+        {
+          "value": "5",
+          "label": "Category 2"
+        }
+      ],
+      "note": "Both template venues checked Category 1 only"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "role": "copy",
+      "note": "Venue name, differs per venue"
+    },
+    {
+      "name": "h1",
+      "type": "text",
+      "role": "copy",
+      "note": "Page H1, differs per venue"
+    },
+    {
+      "name": "h2",
+      "type": "text",
+      "role": "copy",
+      "note": "Page H2 / subtitle. Venue 1 has value, Venue 2 empty."
+    },
+    {
+      "name": "slug",
+      "type": "text",
+      "role": "copy",
+      "note": "URL slug, differs per venue"
+    },
+    {
+      "name": "roomcode",
+      "type": "text",
+      "role": "copy",
+      "note": "Booking code. Empty on both template venues."
+    },
+    {
+      "name": "descr_short",
+      "type": "textarea",
+      "role": "copy",
+      "note": "Short description, differs per venue"
+    },
+    {
+      "name": "filename",
+      "type": "hidden",
+      "role": "image",
+      "note": "Hero image path. Populated via image picker UI."
+    },
+    {
+      "name": "floor_image[image_id]",
+      "type": "text",
+      "role": "image",
+      "note": "Floor plan image ID. Empty on both."
+    },
+    {
+      "name": "floor_image[cropping]",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "floor_image[focal_point]",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "brochure",
+      "type": "hidden",
+      "role": "copy",
+      "note": "Document/brochure upload. VENUES ONLY - not present on rooms. Empty on both."
+    },
+    {
+      "name": "descr",
+      "type": "textarea",
+      "role": "copy",
+      "note": "Full description. Rich text with HTML. Differs per venue."
+    },
+    {
+      "name": "meta_title",
+      "type": "text",
+      "role": "copy",
+      "note": "SEO meta title. Empty on both."
+    },
+    {
+      "name": "meta_desc",
+      "type": "textarea",
+      "role": "copy"
+    },
+    {
+      "name": "meta_keywords",
+      "type": "textarea",
+      "role": "copy"
+    },
+    {
+      "name": "omniture",
+      "type": "textarea",
+      "role": "copy"
+    },
+    {
+      "name": "meta_robots",
+      "type": "select",
+      "role": "keep",
+      "default_value": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "index, follow, noodp, noydir"
+        },
+        {
+          "value": "0",
+          "label": "noindex, nofollow"
+        },
+        {
+          "value": "3",
+          "label": "index, nofollow"
+        },
+        {
+          "value": "2",
+          "label": "noindex, follow"
+        }
+      ]
+    },
+    {
+      "name": "hidden_from_sitemap",
+      "type": "checkbox",
+      "role": "keep",
+      "hidden_default": "0",
+      "checkbox_value": "1"
+    },
+    {
+      "name": "meta_canonical_landing",
+      "type": "select",
+      "role": "keep",
+      "default_value": "self"
+    },
+    {
+      "name": "schema",
+      "type": "textarea",
+      "role": "copy"
+    },
+    {
+      "name": "tags[]",
+      "type": "select",
+      "role": "copy"
+    },
+    {
+      "name": "thumbnail[image_id]",
+      "type": "text",
+      "role": "image"
+    },
+    {
+      "name": "thumbnail[cropping]",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "thumbnail[focal_point]",
+      "type": "hidden",
+      "role": "keep"
+    },
+    {
+      "name": "use_inherit_ti",
+      "type": "radio",
+      "role": "keep",
+      "options": [
+        {
+          "value": "1",
+          "label": "Use Hero Image"
+        },
+        {
+          "value": "0",
+          "label": "Use Custom Thumbnail"
+        }
+      ]
+    },
+    {
+      "name": "extlinkrfp",
+      "type": "text",
+      "role": "copy",
+      "note": "RFP / inquiry link. VENUES ONLY - replaces rooms' extlink/extlinkmob. Value is a path or full URL."
+    },
+    {
+      "name": "linkBtnrfp",
+      "type": "hidden",
+      "role": "keep",
+      "value": "Browse Pages"
+    },
+    {
+      "name": "extlinkrfp_title",
+      "type": "text",
+      "role": "copy",
+      "note": "RFP link title. Venue 1: 'Submit RFP', Venue 2: empty."
+    },
+    {
+      "name": "link",
+      "type": "text",
+      "role": "copy",
+      "note": "Internal page link. Empty on both."
+    },
+    {
+      "name": "linkBtn",
+      "type": "hidden",
+      "role": "keep",
+      "value": "Browse Pages"
+    },
+    {
+      "name": "link_title",
+      "type": "text",
+      "role": "copy"
+    },
+    {
+      "name": "linkmob",
+      "type": "text",
+      "role": "copy"
+    },
+    {
+      "name": "linkmobBtn",
+      "type": "hidden",
+      "role": "keep",
+      "value": "Browse Pages"
+    },
+    {
+      "name": "linkmob_title",
+      "type": "text",
+      "role": "copy"
+    },
+    {
+      "name": "layout",
+      "type": "select",
+      "role": "keep",
+      "default_value": "",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "listing",
+          "label": "Listing"
+        },
+        {
+          "value": "template-1",
+          "label": "Template-1"
+        }
+      ],
+      "note": "Different layout options from rooms. Default on both venues."
+    },
+    {
+      "name": "featured",
+      "type": "checkbox",
+      "role": "keep",
+      "hidden_default": "0",
+      "checkbox_value": "1"
+    },
+    {
+      "name": "speRuleIds",
+      "type": "select",
+      "role": "keep",
+      "default_value": "0",
+      "options": [
+        {
+          "value": "0",
+          "label": "All Visitors"
+        }
+      ]
+    },
+    {
+      "name": "speMatch",
+      "type": "hidden",
+      "role": "keep",
+      "value": "OR"
+    },
+    {
+      "name": "published",
+      "type": "checkbox",
+      "role": "copy",
+      "hidden_default": "0",
+      "checkbox_value": "1",
+      "note": "Venue 1: published. Venue 2: draft."
+    }
+  ],
+  "differences_from_rooms": {
+    "added_fields": [
+      "brochure (hidden, document upload)",
+      "extlinkrfp (RFP/inquiry link, replaces extlink)",
+      "extlinkrfp_title (RFP link title)"
+    ],
+    "removed_fields": [
+      "type_id (no venue types select)",
+      "extlink (desktop booking link)",
+      "extlinkmob (mobile booking link)",
+      "price_enabled, price_prefix, price_set_prefix, price_set_copy, price_set_suffix, price_set (entire price section)",
+      "currency_copy, currency_append, currency_set_copy, currency_set_append, currency_set (entire currency section)",
+      "price_link, priceLinkBtn (price link)"
+    ],
+    "different_layout_options": "Default/Listing/Template-1 (vs rooms: Default/Template 1-1/Template 1-2)"
+  },
+  "features": {
+    "description": "Features and amenities for venues. Meeting-room focused: room layouts, AV equipment, capacity.",
+    "field_pattern": "features[{feature_db_id}][feature_{feature_db_id}]",
+    "role": "copy",
+    "note": "Feature ids are per site. List them from the create form.",
+    "checkbox_features": [],
+    "text_features": []
+  },
+  "gallery": {
+    "description": "Sortable image gallery, same structure as rooms.",
+    "field_pattern": "gallery[{id}][{field}]",
+    "fields_per_item": [
+      "image_id",
+      "image_name",
+      "caption",
+      "url",
+      "cropping",
+      "focal_point"
+    ],
+    "role": "copy",
+    "note": "Venue 1 has 3 gallery images. Venue 2 has 0."
+  },
+  "layout_sections": {
+    "description": "Optional layout sections on the Layout tab.",
+    "note": "Venue 1 has 2 layout sections (IDs 23, 24). Venue 2 has 0.",
+    "template_sections": [
+      {
+        "section_id": 23,
+        "hash": "6ac9aab19cf42",
+        "note": "Hash is page-specific",
+        "elements": [
+          {
+            "suffix": "[elements][125]",
+            "type": "text",
+            "role": "copy",
+            "template_value": "Overline Text"
+          },
+          {
+            "suffix": "[elements][126]",
+            "type": "text",
+            "role": "copy",
+            "template_value": "Section Title"
+          },
+          {
+            "suffix": "[elements][127]",
+            "type": "textarea",
+            "role": "copy",
+            "template_value": "Bullet list HTML"
+          },
+          {
+            "suffix": "[elements][128]",
+            "type": "textarea",
+            "role": "copy",
+            "template_value": "Bullet list HTML"
+          },
+          {
+            "suffix": "[elements][129]",
+            "type": "textarea",
+            "role": "copy",
+            "template_value": "Bullet list HTML"
+          }
+        ],
+        "settings": [
+          "speMatch",
+          "speRuleIds"
+        ]
+      },
+      {
+        "section_id": 24,
+        "hash": "6ac9aab19ec0c",
+        "note": "Hash is page-specific",
+        "elements": [
+          {
+            "suffix": "[elements][130]",
+            "type": "text",
+            "role": "empty",
+            "template_value": ""
+          }
+        ]
+      }
+    ],
+    "available_layout_section_ids": [
+      22,
+      23,
+      24
+    ]
+  },
+  "content_sections": {
+    "import": {
+      "supported": true,
+      "button_selector": ".js-open-popup-import",
+      "importable_section_ids": [
+        25,
+        21,
+        18,
+        15,
+        16,
+        9,
+        17,
+        14,
+        11,
+        13,
+        12,
+        3,
+        10,
+        19,
+        20
+      ],
+      "note": "Same 15 ACM sections as rooms. Venue 1 has 0 imported sections. Venue 2 has 0."
+    },
+    "template_sections": []
+  },
+  "tabs": [
+    "Copy",
+    "Sections",
+    "Layout",
+    "Features/Amenities",
+    "SEO/Meta",
+    "Images",
+    "Links",
+    "Settings",
+    "Attributes",
+    "Versions",
+    "Your Drafts"
+  ],
+  "tab_differences_from_rooms": "No Price tab (venues don't have pricing fields)",
+  "assumptions": [
+    "Layout section templates are shared with rooms; hashes differ per page",
+    "Feature ids are venue-specific and do not overlap with room feature ids",
+    "The brochure field is a document upload handled through the UI",
+    "The form reuses the #edit-room id from the rooms module",
+    "Layout sections and gallery images are optional per page"
+  ],
+  "_note": "Default Cendyn CMS reference (v.11.4), derived from a demo site and cross-checked against one production site. Copy this folder to content-jobs/<site>/ and verify per site. page_level_fields confirmed on a production site (all present except rooms type_id, which is optional per site). Feature ids and section hashes are per site."
+}

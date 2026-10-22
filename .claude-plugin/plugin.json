@@ -1,0 +1,15 @@
+{
+  "name": "cms-toolkit",
+  "version": "0.3.0",
+  "displayName": "Cendyn CMS Toolkit",
+  "description": "Discover, extract, build and log migrations in any Cendyn CMS module (rooms, offers, venues, events, blog, galleries, sections). Four skills: cendyn-discovery (maps a template into a reusable profile), cendyn-copy (extracts source copy with provenance tags), cendyn-page-builder (creates pages from profile + content) and migration-log (one living record per site). Includes shared profiles and worked examples.",
+  "author": {
+    "name": "Randy Helvey"
+  },
+  "keywords": [
+    "cendyn",
+    "cms",
+    "migration",
+    "hospitality"
+  ]
+}

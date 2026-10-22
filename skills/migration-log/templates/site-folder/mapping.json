@@ -1,0 +1,31 @@
+{
+  "_readme": "Generic site mapping: differences from the defaults, source-to-Cendyn mapping, and the section library. Copy to content-jobs/<site>/mapping.json and fill. Keep only what differs from references/defaults/. Fast path: run skills/cendyn-discovery/references/probe-sections.js once (all definitions), then compare two Hotel Overview-style pages for keep/copy roles. No client names, URLs or ids belong in this template.",
+  "differences_from_defaults": [],
+  "source_cms": "",
+  "source_mapping": [],
+  "site": "",
+  "discovered": "",
+  "cms_version": "",
+  "acm_definition_cp": null,
+  "definition_url_pattern": "/admin/channel/edit/cp/<cp>/id/<section_id>",
+  "page_edit_url_patterns": { "brand": "/admin/content/edit/id/<pageId>/ln/1", "property": "/admin/content/edit/id/<pageId>/cp/<propertyId>/ln/1" },
+  "base_template": { "name": "", "reference_pages": [], "section_order": [], "optional_extra": {} },
+  "sections": {
+    "<section_id>": {
+      "slug": "",
+      "title": "",
+      "pages_using": 0,
+      "elements": [ { "depth": 0, "type": "string|editor|image|link|select|grid|row|widget", "slug": "", "required": false, "size": [0, 0] } ],
+      "roles": "element slug = copy | keep | image | icon | empty  (needs 2 pages to tell keep from copy)"
+    }
+  },
+  "outdated_sections_read_only_sources": {},
+  "brand_pages": { "<pageId> <title>": [] },
+  "property_pages": { "<pageId> <title>": [] },
+  "properties": {},
+  "notes": [
+    "Element suffixes in page forms are [elements][<elementId>] and [row_N][elements][<id>]; element ids belong to the section definition, so one suffix map serves every page using that section.",
+    "Element types seen on Cendyn CMS: string, editor, image (with size), link (name/url/menu_id/target), select, grid>row (repeater, min/max rows), widget (faq, rooms, gallery, categories).",
+    "Treat OUTDATED sections as read-only content sources."
+  ]
+}

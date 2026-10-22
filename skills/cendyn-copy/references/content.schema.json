@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "content.json (source copy for a Cendyn page type)",
+  "type": "object",
+  "required": ["site", "page_type", "pages"],
+  "$defs": {
+    "field": {
+      "type": "object",
+      "required": ["value", "src"],
+      "properties": {
+        "value": {},
+        "src": {"enum": ["verbatim", "derived", "authored", "missing"]},
+        "from": {"type": "string", "description": "source URL, optionally #anchor"},
+        "note": {"type": "string"}
+      }
+    }
+  },
+  "properties": {
+    "site": {"type": "string"},
+    "page_type": {"type": "string"},
+    "extracted": {"type": "string", "format": "date"},
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "source_url", "fields"],
+        "properties": {
+          "key": {"type": "string", "description": "slug-style id"},
+          "source_url": {"type": "string"},
+          "method": {"enum": ["screaming-frog", "firecrawl", "browser-innertext", "tavily-extract", "webfetch"]},
+          "image_folder_id": {"type": ["integer", "null"]},
+          "aliases": {"type": "array", "items": {"type": "string"}},
+          "fields": {
+            "type": "object",
+            "description": "content_key -> field (keys come from the page-type profile)",
+            "additionalProperties": {"$ref": "#/$defs/field"}
+          },
+          "flags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

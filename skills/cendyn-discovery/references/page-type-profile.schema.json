@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cendyn page-type profile",
+  "type": "object",
+  "required": [
+    "site",
+    "page_type",
+    "module",
+    "endpoints",
+    "form",
+    "page_fields",
+    "sections"
+  ],
+  "properties": {
+    "site": {
+      "type": "string"
+    },
+    "page_type": {
+      "type": "string",
+      "description": "your label: rooms, offers, venues…"
+    },
+    "template_family": {
+      "type": "string",
+      "description": "name of the CMS template this site uses, if known. Optional."
+    },
+    "module": {
+      "type": "string",
+      "description": "CMS module path segment, e.g. rooms"
+    },
+    "discovered": {
+      "type": "string",
+      "format": "date"
+    },
+    "template": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "endpoints": {
+      "type": "object",
+      "required": [
+        "list",
+        "create",
+        "edit"
+      ],
+      "properties": {
+        "list": {
+          "type": "string"
+        },
+        "create": {
+          "type": "string"
+        },
+        "edit": {
+          "type": "string",
+          "description": "with {id} placeholder"
+        },
+        "success_redirect": {
+          "type": "string",
+          "description": "URL a successful save lands on"
+        }
+      }
+    },
+    "form": {
+      "type": "object",
+      "properties": {
+        "selector_rule": {
+          "type": "string",
+          "description": "how to find the form, e.g. 'form containing [name=name]'"
+        },
+        "action_attr_empty": {
+          "type": "boolean"
+        }
+      }
+    },
+    "page_fields": {
+      "type": "object",
+      "description": "page-level fields: name -> {type, role, options?, value_in_template?}",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "copy",
+              "image",
+              "icon",
+              "keep",
+              "link",
+              "empty",
+              "select",
+              "category"
+            ]
+          },
+          "options": {
+            "type": "object"
+          },
+          "content_key": {
+            "type": "string",
+            "description": "key in content.json that fills it"
+          }
+        }
+      }
+    },
+    "import": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "button_selector": {
+          "type": "string"
+        },
+        "data_url": {
+          "type": "string"
+        },
+        "json": {
+          "type": "array"
+        },
+        "requires_trusted_click": {
+          "type": "boolean"
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "section_id"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "rows": {
+            "type": "object",
+            "description": "repeater element suffix -> row count in template"
+          },
+          "elements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "suffix",
+                "role"
+              ],
+              "properties": {
+                "suffix": {
+                  "type": "string",
+                  "description": "e.g. [elements][155] or [row_{n}][elements][161]"
+                },
+                "role": {
+                  "enum": [
+                    "copy",
+                    "image",
+                    "icon",
+                    "keep",
+                    "link",
+                    "empty"
+                  ]
+                },
+                "label": {
+                  "type": "string"
+                },
+                "content_key": {
+                  "type": "string"
+                },
+                "format": {
+                  "enum": [
+                    "text",
+                    "html",
+                    "ul",
+                    "image_id"
+                  ]
+                }
+              }
+            }
+          },
+          "ref": {
+            "type": "string",
+            "description": "pointer into mapping.json when the section is already mapped site-wide"
+          }
+        },
+        "anyOf": [
+          {
+            "required": [
+              "elements"
+            ]
+          },
+          {
+            "required": [
+              "ref"
+            ]
+          }
+        ]
+      }
+    },
+    "images": {
+      "type": "object",
+      "properties": {
+        "root_folder_id": {
+          "type": "integer"
+        },
+        "organization": {
+          "enum": [
+            "per-page-subfolders",
+            "descriptive-filenames",
+            "opaque-flat"
+          ]
+        },
+        "folders": {
+          "type": "object"
+        },
+        "slots": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "strategy": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

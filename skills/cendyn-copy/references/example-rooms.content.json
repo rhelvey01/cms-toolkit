@@ -1,0 +1,137 @@
+{
+  "site": "example-site",
+  "page_type": "rooms",
+  "extracted": "<yyyy-mm-dd>",
+  "pages": [
+    {
+      "key": "property-one",
+      "source_url": "https://example.com/rooms/property-one",
+      "method": "browser-innertext",
+      "image_folder_id": 2,
+      "fields": {
+        "name": {
+          "value": "Property One",
+          "src": "verbatim",
+          "from": "https://example.com/rooms/property-one"
+        },
+        "slug": {
+          "value": "property-one",
+          "src": "derived"
+        },
+        "descr_short": {
+          "value": "A bright, airy home steps from the water.",
+          "src": "verbatim",
+          "from": "https://example.com/rooms/property-one#intro"
+        },
+        "intro": {
+          "value": "<p>A bright, airy home steps from the water.</p><p>Sleeps six guests; children must be 5 or older.</p>",
+          "src": "verbatim",
+          "from": "https://example.com/rooms/property-one#intro"
+        },
+        "badges": {
+          "value": [
+            "3 Beds",
+            "6 People",
+            "Direct Beach Access",
+            "3 Bathrooms"
+          ],
+          "src": "derived",
+          "from": "https://example.com/rooms/property-one",
+          "note": "numbers from the source specs; wording follows the template"
+        },
+        "cards": {
+          "value": [
+            {
+              "heading": "Areas To Gather",
+              "body": "<p>Open-plan living opens onto the deck.</p>"
+            }
+          ],
+          "src": "authored",
+          "note": "written from source facts; always review"
+        },
+        "amenities_1": {
+          "value": [
+            "2 golf carts",
+            "Kayaks"
+          ],
+          "src": "derived",
+          "from": "https://example.com/rooms/property-one"
+        },
+        "slides": {
+          "value": [
+            101,
+            102,
+            103,
+            104
+          ],
+          "src": "derived",
+          "note": "default strategy: lowest image ids first (arbitrary)"
+        }
+      },
+      "flags": []
+    },
+    {
+      "key": "property-two",
+      "source_url": "https://example.com/rooms/property-two",
+      "method": "browser-innertext",
+      "image_folder_id": 3,
+      "fields": {
+        "name": {
+          "value": "Property Two",
+          "src": "verbatim",
+          "from": "https://example.com/rooms/property-two"
+        },
+        "slug": {
+          "value": "property-two",
+          "src": "derived"
+        },
+        "descr_short": {
+          "value": "A quiet retreat on five acres.",
+          "src": "verbatim",
+          "from": "https://example.com/rooms/property-two#intro"
+        },
+        "intro": {
+          "value": "<p>A quiet retreat on five acres.</p>",
+          "src": "verbatim",
+          "from": "https://example.com/rooms/property-two#intro"
+        },
+        "badges": {
+          "value": [
+            "4 Beds",
+            "8 People",
+            "Direct Beach Access",
+            "4 Bathrooms"
+          ],
+          "src": "derived",
+          "from": "https://example.com/rooms/property-two"
+        },
+        "cards": {
+          "value": null,
+          "src": "missing",
+          "note": "source has no gathering-area copy"
+        },
+        "amenities_1": {
+          "value": [
+            "No on-site WiFi (available at the clubhouse)"
+          ],
+          "src": "derived",
+          "from": "https://example.com/rooms/property-two",
+          "note": "differs from property one; kept on purpose"
+        },
+        "slides": {
+          "value": [
+            201,
+            202,
+            203,
+            204
+          ],
+          "src": "derived",
+          "note": "default strategy: lowest image ids first (arbitrary)"
+        }
+      },
+      "flags": [
+        "No on-site WiFi, unlike property one; kept on purpose"
+      ]
+    }
+  ]
+}

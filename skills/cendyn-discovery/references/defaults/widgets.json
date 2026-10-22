@@ -1,0 +1,836 @@
+{
+  "widgets": {
+    "_meta": {
+      "description": "Embeddable shortcodes inserted via Widget Insertion dialog into body/content textareas",
+      "shortcode_format": "hebs-widget-shortcode span with data-widget-name and data-widget-action attributes",
+      "total_count": 20,
+      "dialog_selector": "#widgetselection-dialog",
+      "widget_button_selector": "button.widgetselection-widget"
+    },
+    "blog": {
+      "label": "Blog",
+      "widget_name": "blog",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "archive",
+            "archive-posts-list",
+            "categories",
+            "featured",
+            "homepage",
+            "index",
+            "post-listing-template",
+            "recent-posts",
+            "related-posts"
+          ]
+        },
+        {
+          "field": "category_id",
+          "label": "Category Id",
+          "type": "select",
+          "options": []
+        }
+      ],
+      "parameters": [
+        {
+          "field": "per_page",
+          "label": "Limit",
+          "type": "text"
+        }
+      ]
+    },
+    "button": {
+      "label": "Button",
+      "widget_name": "button",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "Read More Button",
+            "button-outline",
+            "index"
+          ]
+        },
+        {
+          "field": "target",
+          "label": "Target Attribute",
+          "type": "select",
+          "options": [
+            "",
+            "_blank (Blank)",
+            "_self (Self)",
+            "_parent (Parent)",
+            "_top (Top)"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "field": "href",
+          "label": "Url",
+          "type": "text"
+        },
+        {
+          "field": "value",
+          "label": "Inner Text",
+          "type": "text"
+        },
+        {
+          "field": "title",
+          "label": "Title Attribute",
+          "type": "text"
+        },
+        {
+          "field": "id",
+          "label": "Id Attribute",
+          "type": "text"
+        },
+        {
+          "field": "class",
+          "label": "Class Attribute",
+          "type": "text"
+        },
+        {
+          "field": "rel",
+          "label": "Relationship rel Attribute",
+          "type": "text"
+        }
+      ]
+    },
+    "careers": {
+      "label": "Careers",
+      "widget_name": "careers",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    "events": {
+      "label": "Events",
+      "widget_name": "events",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "home",
+            "index",
+            "list"
+          ]
+        },
+        {
+          "field": "categories[]",
+          "label": "Categories",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": [
+        {
+          "field": "limit",
+          "label": "Limit",
+          "type": "text"
+        }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "widget_name": "faq",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        },
+        {
+          "field": "ids[]",
+          "label": "Categories",
+          "type": "select-multi",
+          "options": []
+        },
+        {
+          "field": "thumbnails",
+          "label": "Thumbnails",
+          "type": "select",
+          "options": [
+            "On (default)",
+            "Questions only",
+            "Categories only",
+            "Off"
+          ]
+        },
+        {
+          "field": "mode",
+          "label": "Start Mode",
+          "type": "select",
+          "options": [
+            "Collapsed (default)",
+            "Expand first",
+            "Expand all"
+          ]
+        },
+        {
+          "field": "expand",
+          "label": "Allow",
+          "type": "select",
+          "options": [
+            "Expand all (default)",
+            "Expand one"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    "featured": {
+      "label": "Promo Tiles",
+      "widget_name": "featured",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "list",
+            "id"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default"
+          ]
+        },
+        {
+          "field": "position",
+          "label": "Position",
+          "type": "select",
+          "options": [
+            "a (Position A - Homepage Promotile)"
+          ]
+        },
+        {
+          "field": "ids[]",
+          "label": "Promo Tiles",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": [
+        {
+          "field": "limit",
+          "label": "Limit",
+          "type": "text"
+        }
+      ]
+    },
+    "forms": {
+      "label": "Forms",
+      "widget_name": "forms",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        },
+        {
+          "field": "id",
+          "label": "Form",
+          "type": "select",
+          "options": []
+        }
+      ],
+      "parameters": [
+        {
+          "field": "href",
+          "label": "Success Redirect Page",
+          "type": "text"
+        }
+      ]
+    },
+    "gallery": {
+      "label": "Gallery",
+      "widget_name": "gallery",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "featured"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "home",
+            "index",
+            "mobile"
+          ]
+        },
+        {
+          "field": "id[]",
+          "label": "Galleries",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": []
+    },
+    "icon": {
+      "label": "Icon",
+      "widget_name": "icon",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        },
+        {
+          "field": "display_type",
+          "label": "Icon Display",
+          "type": "select",
+          "options": [
+            "Inline (display:inline-block)",
+            "Block (display:table)"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "field": "href",
+          "label": "Url",
+          "type": "text"
+        },
+        {
+          "field": "title",
+          "label": "Title",
+          "type": "text"
+        },
+        {
+          "field": "image_id",
+          "label": "Icon Image",
+          "type": "text"
+        }
+      ]
+    },
+    "map": {
+      "label": "Map",
+      "widget_name": "map",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    "menushowcase": {
+      "label": "Menu Showcase",
+      "widget_name": "menushowcase",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        },
+        {
+          "field": "ids[]",
+          "label": "Menu Showcase",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": []
+    },
+    "newsletterCrmSignup": {
+      "label": "Newsletter CRM Signup",
+      "widget_name": "newsletterCrmSignup",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "field": "form_id",
+          "label": "Form Id",
+          "type": "text"
+        },
+        {
+          "field": "crm_post_url",
+          "label": "CRM Post URL",
+          "type": "text"
+        },
+        {
+          "field": "href",
+          "label": "Success Page",
+          "type": "text"
+        }
+      ]
+    },
+    "poi": {
+      "label": "Point of Interest",
+      "widget_name": "poi",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "categories",
+            "classifiers"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index",
+            "poi-list"
+          ]
+        },
+        {
+          "field": "category_id",
+          "label": "Category",
+          "type": "select",
+          "options": []
+        },
+        {
+          "field": "id[]",
+          "label": "Categories",
+          "type": "select-multi",
+          "options": []
+        },
+        {
+          "field": "classifiers[]",
+          "label": "Classifiers",
+          "type": "select-multi",
+          "options": []
+        },
+        {
+          "field": "categories[]",
+          "label": "Categories (slug)",
+          "type": "select-multi",
+          "options": [
+            "shopping",
+            "restaurants-bars",
+            "attractions",
+            "nightlife",
+            "arts-culture",
+            "outdoors",
+            "entertainment"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    "pressroom": {
+      "label": "Press Room",
+      "widget_name": "pressroom",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "category",
+            "featured"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "category",
+            "index"
+          ]
+        },
+        {
+          "field": "category",
+          "label": "Category",
+          "type": "select",
+          "options": []
+        },
+        {
+          "field": "orderby",
+          "label": "Order By",
+          "type": "select",
+          "options": [
+            "date"
+          ]
+        },
+        {
+          "field": "direction",
+          "label": "Order Direction",
+          "type": "select",
+          "options": [
+            "DESC (Descending)",
+            "ASC (Ascending)"
+          ]
+        },
+        {
+          "field": "ids[]",
+          "label": "Categories",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": []
+    },
+    "rfp": {
+      "label": "RFP",
+      "widget_name": "rfp",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        },
+        {
+          "field": "id",
+          "label": "Name",
+          "type": "select",
+          "options": []
+        }
+      ],
+      "parameters": []
+    },
+    "rooms": {
+      "label": "Rooms",
+      "widget_name": "rooms",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "featured",
+            "category",
+            "type"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "Category template",
+            "Default template (index)",
+            "Type template",
+            "rooms-sliders"
+          ]
+        },
+        {
+          "field": "ids[]",
+          "label": "Rooms",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": []
+    },
+    "sitemap": {
+      "label": "Site Map",
+      "widget_name": "sitemap",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    "specials": {
+      "label": "Specials",
+      "widget_name": "specials",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "front",
+            "list",
+            "category",
+            "categories",
+            "classifier"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "categories",
+            "index",
+            "list",
+            "loyalty",
+            "offer-sliders",
+            "similar-offer-sliders"
+          ]
+        },
+        {
+          "field": "slug",
+          "label": "Special Offer",
+          "type": "select",
+          "options_note": "Lists existing special offers by slug"
+        },
+        {
+          "field": "categories[]",
+          "label": "Categories",
+          "type": "select-multi",
+          "options": []
+        },
+        {
+          "field": "with_categories",
+          "label": "Include",
+          "type": "select",
+          "options": []
+        },
+        {
+          "field": "category",
+          "label": "Category",
+          "type": "select",
+          "options": []
+        },
+        {
+          "field": "with_specials",
+          "label": "Include",
+          "type": "select",
+          "options_note": "Default / Category Data Only / Category and Offer Data"
+        },
+        {
+          "field": "classifier",
+          "label": "Classifier",
+          "type": "select",
+          "options": []
+        }
+      ],
+      "parameters": []
+    },
+    "stayconnected": {
+      "label": "Stay Connected",
+      "widget_name": "stayconnected",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "index"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    "venues": {
+      "label": "Venues",
+      "widget_name": "venues",
+      "settings": [
+        {
+          "field": "action",
+          "label": "Action",
+          "type": "select",
+          "options": [
+            "index",
+            "featured",
+            "category"
+          ]
+        },
+        {
+          "field": "template",
+          "label": "Template",
+          "type": "select",
+          "options": [
+            "Default",
+            "category",
+            "index"
+          ]
+        },
+        {
+          "field": "ids[]",
+          "label": "Venues",
+          "type": "select-multi",
+          "options": []
+        }
+      ],
+      "parameters": []
+    }
+  },
+  "_note": "Default Cendyn CMS reference (v.11.4), derived from a demo site and cross-checked against one production site. Copy this folder to content-jobs/<site>/ and verify per site. Option lists (templates, category ids) are example values; re-read per site."
+}

@@ -1,0 +1,27 @@
+flowchart TD
+  START(["New migration job"]) --> HAVE{"migrations/site/<br/>exists?"}
+  HAVE -- "no" --> NEW["migration-log skill:<br/>copy templates/site-folder/<br/>to migrations/site/"]
+  NEW --> RULES
+  HAVE -- "yes" --> RULES["Read site folder first:<br/>instructions.md, mapping.md,<br/>migration-log.csv"]
+
+  RULES --> PROF{"Profile for this page type<br/>already in migrations/site/?"}
+
+  PROF -- "no" --> DISC["cendyn-discovery - read-only<br/>1. start from references/defaults/<br/>2. run probe-sections.js on the admin<br/>3. dry run, no POST"]
+  DISC --> DIFF["Write differences only to<br/>migrations/site/:<br/>mapping.md, sections.json,<br/>page-types/type.json"]
+  DIFF --> SRC
+
+  PROF -- "yes" --> SRC{"Source is a<br/>non-Cendyn site?"}
+
+  SRC -- "yes" --> COPY["cendyn-copy<br/>scrape source to content.json<br/>tag each field verbatim,<br/>derived or authored"]
+  SRC -- "no, content already in CMS" --> BUILD
+  COPY --> BUILD
+
+  BUILD["cendyn-page-builder - only skill that writes<br/>create page, import sections,<br/>fill from profile + content.json, save"]
+  BUILD --> VERIFY["Re-read saved page<br/>and confirm result"]
+  VERIFY --> LOG["migration-log skill<br/>append one row per page per job<br/>to migration-log.csv<br/>problems column is mandatory"]
+  LOG --> DONE(["Done: record lives in<br/>migrations/site/, never in the repo"])
+
+  classDef private fill:#fff3e0,stroke:#e08a00,color:#000
+  classDef skill fill:#e8f1ff,stroke:#2f6fdb,color:#000
+  class RULES,DIFF,NEW private
+  class DISC,COPY,BUILD,LOG skill

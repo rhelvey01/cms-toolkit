@@ -1,0 +1,784 @@
+{
+  "settings": {
+    "content": {
+      "label": "Page Manager",
+      "url": "/admin/settings/content",
+      "tabs": {
+        "images": {
+          "label": "Images",
+          "fields": [
+            {
+              "name": "default_top_images",
+              "type": "image_group",
+              "note": "Default Top Images with marketing message, link, position, audience, publishing"
+            }
+          ]
+        },
+        "meta": {
+          "label": "Meta",
+          "fields": [
+            {
+              "name": "thumbnail image_id",
+              "type": "text",
+              "note": "Site-wide default thumbnail image"
+            }
+          ]
+        }
+      }
+    },
+    "layout": {
+      "label": "Layout Settings",
+      "url": "/admin/settings/layout",
+      "loaded_sections": [
+        {
+          "section_id": 26,
+          "template": "alert-bar",
+          "title": "Alert Bar",
+          "elements": [
+            {
+              "slug": "content",
+              "title": "Content",
+              "type": "editor"
+            },
+            {
+              "slug": "link",
+              "title": "Link",
+              "type": "link"
+            }
+          ]
+        }
+      ],
+      "importable_section_ids": [
+        22,
+        24,
+        23
+      ],
+      "note": "System/layout-only sections (IDs 22-24, 26) not in ACM channel index. Export/Import buttons available."
+    },
+    "rooms": {
+      "label": "Rooms Settings",
+      "url": "/admin/settings/rooms",
+      "tabs": {
+        "seo": {
+          "label": "Seo",
+          "url": "/admin/settings/rooms",
+          "fields": [
+            {
+              "name": "auto_generate_schema",
+              "type": "toggle",
+              "options": [
+                "ON",
+                "OFF"
+              ]
+            },
+            {
+              "name": "include_jsonld_list",
+              "label": "Category Schema",
+              "type": "select",
+              "options": [
+                "WebPage only",
+                "Off"
+              ]
+            },
+            {
+              "name": "include_jsonld_view",
+              "label": "Object Schema",
+              "type": "select",
+              "options": [
+                "WebPage only",
+                "Off"
+              ]
+            }
+          ]
+        },
+        "features_amenities": {
+          "label": "Features/Amenities",
+          "url": "/admin/settings/roomsfeatures",
+          "actions": [
+            "New Feature",
+            "New Amenity"
+          ],
+          "columns": [
+            "Title",
+            "Slug",
+            "Type",
+            "Element",
+            "Category",
+            "Locked",
+            "Action"
+          ],
+          "items": [
+            {
+              "title": "Iron",
+              "slug": "iron",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Clothes Dryer",
+              "slug": "clothes-dryer",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Washing Machine",
+              "slug": "washing-machine",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Pull-Out Sofa",
+              "slug": "pulloutsofa",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Mini Fridge",
+              "slug": "minifridge",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "High Floor",
+              "slug": "highfloor",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Features"
+            },
+            {
+              "title": "Coffee Maker",
+              "slug": "coffeemaker",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Pool View",
+              "slug": "pool-view",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Features"
+            },
+            {
+              "title": "Ocean View",
+              "slug": "ocean-view",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Features"
+            },
+            {
+              "title": "City View",
+              "slug": "city-view",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Features"
+            },
+            {
+              "title": "Pet Friendly",
+              "slug": "pet-friendly",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Flat Screen TV",
+              "slug": "flat-screen-tv",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Room Service",
+              "slug": "room-service",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Smoke Free",
+              "slug": "smoke-free",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Safe",
+              "slug": "safe",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Hair Dryer",
+              "slug": "hair-dryer",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Beds",
+              "slug": "beds",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            },
+            {
+              "title": "Mini Bar",
+              "slug": "minibar",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Free parking",
+              "slug": "parking",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Personal Items",
+              "slug": "personal_items",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "WiFi",
+              "slug": "wifi",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Air Conditioning",
+              "slug": "ac",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Pet Friendly",
+              "slug": "pets",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Smoking",
+              "slug": "smoking",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "TV",
+              "slug": "tv",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Kitchen Facilities",
+              "slug": "kitchen",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Accessibility Features",
+              "slug": "adaroom",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Features"
+            },
+            {
+              "title": "Balcony",
+              "slug": "balcony",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Features"
+            },
+            {
+              "title": "View",
+              "slug": "view",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            },
+            {
+              "title": "Room Size",
+              "slug": "size",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            },
+            {
+              "title": "Occupancy",
+              "slug": "occupancy",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            }
+          ],
+          "total_items": 31
+        }
+      }
+    },
+    "venues": {
+      "label": "Venues Settings",
+      "url": "/admin/settings/venues",
+      "tabs": {
+        "seo": {
+          "label": "Seo",
+          "url": "/admin/settings/venues",
+          "fields": [
+            {
+              "name": "auto_generate_schema",
+              "type": "toggle",
+              "options": [
+                "ON",
+                "OFF"
+              ]
+            },
+            {
+              "name": "include_jsonld_list",
+              "label": "Category Schema",
+              "type": "select",
+              "options": [
+                "WebPage only",
+                "Off"
+              ]
+            },
+            {
+              "name": "include_jsonld_view",
+              "label": "Object Schema",
+              "type": "select",
+              "options": [
+                "WebPage only",
+                "Off"
+              ]
+            }
+          ]
+        },
+        "features_amenities": {
+          "label": "Features/Amenities",
+          "url": "/admin/settings/venuesfeatures",
+          "actions": [
+            "New Feature",
+            "New Amenity"
+          ],
+          "columns": [
+            "Title",
+            "Slug",
+            "Type",
+            "Element",
+            "Category",
+            "Locked",
+            "Action"
+          ],
+          "items": [
+            {
+              "title": "Cabaret set-up",
+              "slug": "cabaret-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Hollow Square set-up",
+              "slug": "hollow-square-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Herringbone set-up",
+              "slug": "herringbone-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Cocktail set-up",
+              "slug": "cocktail-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Parking",
+              "slug": "parking",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Accessibility Features",
+              "slug": "accessibility-features",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Ceiling Height",
+              "slug": "ceiling-height",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            },
+            {
+              "title": "Square Footage",
+              "slug": "square-footage",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            },
+            {
+              "title": "Guest Capacity",
+              "slug": "guest-capacity",
+              "type": "Feature",
+              "element": "text",
+              "category": ""
+            },
+            {
+              "title": "Ceremony set-up",
+              "slug": "ceremony-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Reception set-up",
+              "slug": "reception-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Dinner dance set-up",
+              "slug": "dinner-dance-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Banquet set-up",
+              "slug": "banquet-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "U-shaped set-up",
+              "slug": "u-shaped-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Boardroom set-up",
+              "slug": "boardroom-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Natural daylight",
+              "slug": "natural-daylight",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Classroom set-up",
+              "slug": "classroom-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Theatre set-up",
+              "slug": "theatre-set-up",
+              "type": "Feature",
+              "element": "checkbox",
+              "category": "Room Layout"
+            },
+            {
+              "title": "Data projector",
+              "slug": "data-projector",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Overhead Projector",
+              "slug": "overhead-projector",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "TV point",
+              "slug": "tv-point",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Flipchart/Presentation equipment",
+              "slug": "flipchart-presentation-equipment",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Audio Equipment",
+              "slug": "audio-equipment",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Visual Equipment",
+              "slug": "visual-equipment",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Blackout Shades",
+              "slug": "blackout-shades",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Wi-Fi",
+              "slug": "wi-fi",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Air conditioning",
+              "slug": "air-conditioning",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Video conferencing",
+              "slug": "video-conferencing",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Direct dial point",
+              "slug": "direct-dial-point",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            },
+            {
+              "title": "Outlets/sockets",
+              "slug": "outlets-sockets",
+              "type": "Amenity",
+              "element": "checkbox",
+              "category": ""
+            }
+          ],
+          "total_items": 30
+        }
+      }
+    },
+    "site": {
+      "label": "Site Settings",
+      "url": "/admin/settings/site",
+      "tabs": {
+        "site": {
+          "label": "Site",
+          "url": "/admin/settings/site",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Hotel name",
+              "type": "text"
+            },
+            {
+              "name": "address",
+              "label": "Address",
+              "type": "text"
+            },
+            {
+              "name": "city",
+              "label": "City",
+              "type": "text"
+            },
+            {
+              "name": "state",
+              "label": "State",
+              "type": "text"
+            },
+            {
+              "name": "zip",
+              "label": "Zip",
+              "type": "text"
+            },
+            {
+              "name": "country_abbreviation",
+              "label": "Country",
+              "type": "select",
+              "options_count": 241
+            },
+            {
+              "name": "phone",
+              "label": "Phone",
+              "type": "text"
+            },
+            {
+              "name": "lat",
+              "label": "Latitude",
+              "type": "text"
+            },
+            {
+              "name": "lng",
+              "label": "Longitude",
+              "type": "text"
+            },
+            {
+              "name": "currency",
+              "label": "Property Currency",
+              "type": "text"
+            },
+            {
+              "name": "price_range",
+              "label": "Price Range",
+              "type": "text"
+            },
+            {
+              "name": "payment_accepted",
+              "label": "Payment Accepted",
+              "type": "text"
+            },
+            {
+              "name": "star_rating",
+              "label": "Star Rating",
+              "type": "hidden"
+            },
+            {
+              "name": "rating_value",
+              "label": "Rating Value",
+              "type": "text"
+            },
+            {
+              "name": "review_count",
+              "label": "Review Count",
+              "type": "text"
+            },
+            {
+              "name": "site_thumbnail image_id",
+              "label": "Thumbnail",
+              "type": "text"
+            }
+          ],
+          "note": "Includes Google Map with address search"
+        },
+        "attributes": {
+          "label": "Attributes",
+          "url": "/admin/settings/siteattributes",
+          "description": "Key-value site attributes with slug/name/value triplets",
+          "categories": [
+            "Uncategorized",
+            "Social Links"
+          ],
+          "items": [
+            {
+              "slug": "blog_template",
+              "name": "Blog Template Number",
+              "value": "3",
+              "category": "Uncategorized"
+            },
+            {
+              "slug": "bookingtext",
+              "name": "Booking Text",
+              "value": "Best Rate Guaranteed",
+              "category": "Uncategorized"
+            },
+            {
+              "slug": "maplink",
+              "name": "Map Link",
+              "value": "/our-location",
+              "category": "Uncategorized"
+            },
+            {
+              "slug": "menu_image",
+              "name": "Navigation Menu",
+              "value": "(CDN image URL)",
+              "category": "Uncategorized"
+            },
+            {
+              "slug": "email",
+              "name": "Email",
+              "value": "contact@hotel.com",
+              "category": "Uncategorized"
+            },
+            {
+              "slug": "facebook",
+              "name": "Facebook",
+              "value": "http://www.facebook.com",
+              "category": "Social Links"
+            },
+            {
+              "slug": "twitter",
+              "name": "Twitter",
+              "value": "http://www.twitter.com",
+              "category": "Social Links"
+            },
+            {
+              "slug": "instagram",
+              "name": "Instagram",
+              "value": "http://www.instagram.com",
+              "category": "Social Links"
+            },
+            {
+              "slug": "youtube",
+              "name": "YouTube",
+              "value": "http://www.youtube.com",
+              "category": "Social Links"
+            }
+          ],
+          "total_items": 9
+        },
+        "attribute_categories": {
+          "label": "Attribute Categories",
+          "url": "/admin/settings/siteattributecategories",
+          "actions": [
+            "Create Category"
+          ],
+          "items": [
+            "Social Links"
+          ]
+        },
+        "google_api_keys": {
+          "label": "Google API Keys",
+          "url": "/admin/settings/google",
+          "fields": [
+            {
+              "name": "map_key",
+              "label": "Google Map Key",
+              "type": "text"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "_note": "Default Cendyn CMS reference (v.11.4), derived from a demo site and cross-checked against one production site. Copy this folder to content-jobs/<site>/ and verify per site."
+}

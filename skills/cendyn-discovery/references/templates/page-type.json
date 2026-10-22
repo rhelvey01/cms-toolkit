@@ -1,0 +1,28 @@
+{
+  "site": "<site>",
+  "page_type": "<offers|venues|events|\u2026>",
+  "template_family": "<template-family or null>",
+  "module": "<from sidebar>",
+  "discovered": null,
+  "template": {
+    "id": null,
+    "name": null
+  },
+  "endpoints": {
+    "list": null,
+    "create": null,
+    "edit": null,
+    "success_redirect": null,
+    "public": null
+  },
+  "form": {
+    "selector_rule": "form containing [name=name]"
+  },
+  "page_fields": {},
+  "import": {
+    "supported": null
+  },
+  "sections": [],
+  "images": {},
+  "_note": "Filled by cendyn-discovery. Reuse mapping.json section entries for any section_id already mapped on this site."
+}

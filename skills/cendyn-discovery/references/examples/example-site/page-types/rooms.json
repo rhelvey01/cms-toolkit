@@ -1,0 +1,186 @@
+{
+  "site": "example-site",
+  "page_type": "rooms",
+  "template_family": "example-family",
+  "module": "rooms",
+  "discovered": "<yyyy-mm-dd>",
+  "template": {
+    "id": 1,
+    "name": "Template Room"
+  },
+  "endpoints": {
+    "list": "/admin/rooms",
+    "create": "/admin/rooms/create",
+    "edit": "/admin/rooms/edit/id/{id}",
+    "success_redirect": "/admin/rooms",
+    "public": "/<section>/{slug}"
+  },
+  "form": {
+    "selector_rule": "form containing [name=name] (index 1 on this site)",
+    "action_attr_empty": true,
+    "field_count_after_import": 251
+  },
+  "page_fields": {
+    "categories[]": {
+      "type": "checkbox",
+      "role": "category",
+      "options": {
+        "1": "Category A",
+        "2": "Category B",
+        "3": "Category C",
+        "4": "Category D"
+      }
+    },
+    "type_id": {
+      "type": "select",
+      "role": "empty",
+      "options": {
+        "": "Please Select",
+        "1": "Type A",
+        "2": "Type B"
+      },
+      "note": "blank in template"
+    },
+    "name": {
+      "type": "text",
+      "role": "copy",
+      "content_key": "name"
+    },
+    "slug": {
+      "type": "text",
+      "role": "copy",
+      "content_key": "slug"
+    },
+    "h1": {
+      "type": "text",
+      "role": "empty"
+    },
+    "h2": {
+      "type": "text",
+      "role": "empty"
+    },
+    "roomcode": {
+      "type": "text",
+      "role": "empty",
+      "note": "blank in the template"
+    },
+    "descr_short": {
+      "type": "textarea",
+      "role": "copy",
+      "content_key": "descr_short"
+    },
+    "descr": {
+      "type": "textarea",
+      "role": "copy",
+      "content_key": "descr"
+    },
+    "thumbnail[image_id]": {
+      "type": "hidden",
+      "role": "image",
+      "content_key": "thumbnail"
+    },
+    "floor_image[image_id]": {
+      "type": "text",
+      "role": "empty"
+    },
+    "filename": {
+      "type": "hidden",
+      "role": "empty"
+    }
+  },
+  "import": {
+    "supported": true,
+    "button_selector": ".js-open-popup-import",
+    "data_url": "/admin/channel/frontsection",
+    "json": [
+      {
+        "section_id": "33",
+        "front_section_id": "1121",
+        "settings": {
+          "status": false,
+          "speRuleIds": "0",
+          "type_id": 1
+        }
+      },
+      {
+        "section_id": "15",
+        "front_section_id": "1122",
+        "settings": {
+          "status": false,
+          "speRuleIds": "0",
+          "type_id": 1
+        }
+      },
+      {
+        "section_id": "34",
+        "front_section_id": "1123",
+        "settings": {
+          "status": false,
+          "speRuleIds": "0",
+          "type_id": 1
+        }
+      },
+      {
+        "section_id": "35",
+        "front_section_id": "1124",
+        "settings": {
+          "status": false,
+          "speRuleIds": "0",
+          "type_id": 1
+        }
+      },
+      {
+        "section_id": "14",
+        "front_section_id": "1125",
+        "settings": {
+          "status": false,
+          "speRuleIds": "0",
+          "type_id": 1
+        }
+      }
+    ],
+    "requires_trusted_click": true
+  },
+  "sections": [
+    {
+      "section_id": "33",
+      "ref": "mapping.json#33"
+    },
+    {
+      "section_id": "15",
+      "ref": "mapping.json#15"
+    },
+    {
+      "section_id": "34",
+      "ref": "mapping.json#34"
+    },
+    {
+      "section_id": "35",
+      "ref": "mapping.json#35"
+    },
+    {
+      "section_id": "14",
+      "ref": "mapping.json#14"
+    }
+  ],
+  "images": {
+    "root_folder_id": 1,
+    "organization": "per-page-subfolders",
+    "filename_pattern": "opaque",
+    "folders": {
+      "Template Room": 2,
+      "<room name>": 3
+    },
+    "slots": [
+      "thumbnail[image_id]",
+      "[elements][77][row_0..3][elements][79][image_id]"
+    ],
+    "left_empty": [
+      "floor_image[image_id]",
+      "filename",
+      "[elements][164][row_n][elements][166][image_id]"
+    ],
+    "strategy": "lowest-id-first (arbitrary)"
+  },
+  "_note": "Illustrative profile from one real site, anonymised. Ids, options and folder ids are placeholders; run cendyn-discovery for yours."
+}

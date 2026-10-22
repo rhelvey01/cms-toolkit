@@ -1,0 +1,1184 @@
+{
+  "cms_version": "v.11.4 Build 7968",
+  "languages": [
+    "en",
+    "fr_FR",
+    "ja_JP"
+  ],
+  "modules": {
+    "blog": {
+      "label": "Blog Posts",
+      "description": "Create blog posts to use on website",
+      "endpoints": {
+        "index": "/admin/blog",
+        "create": "/admin/blog/create"
+      },
+      "import_supported": true,
+      "import_sections": null,
+      "page_level_fields": [
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "h2",
+          "type": "text"
+        },
+        {
+          "name": "slug",
+          "type": "text"
+        },
+        {
+          "name": "post_date",
+          "type": "text"
+        },
+        {
+          "name": "descr_short",
+          "type": "textarea"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_title",
+          "type": "text"
+        },
+        {
+          "name": "meta_desc",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_keywords",
+          "type": "textarea"
+        },
+        {
+          "name": "omniture",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_robots",
+          "type": "select",
+          "options": 4
+        },
+        {
+          "name": "hidden_from_sitemap",
+          "type": "checkbox"
+        },
+        {
+          "name": "meta_canonical_landing",
+          "type": "select"
+        },
+        {
+          "name": "schema",
+          "type": "textarea"
+        },
+        {
+          "name": "tags",
+          "type": "select"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "use_inherit_ti",
+          "type": "radio"
+        },
+        {
+          "name": "categories",
+          "type": "checkbox"
+        },
+        {
+          "name": "tagcloud",
+          "type": "text"
+        },
+        {
+          "name": "frontpage",
+          "type": "radio"
+        },
+        {
+          "name": "pinned",
+          "type": "radio"
+        },
+        {
+          "name": "starred",
+          "type": "radio"
+        },
+        {
+          "name": "private",
+          "type": "radio"
+        },
+        {
+          "name": "layout",
+          "type": "select",
+          "options": 2
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "publishing status",
+          "type": "select",
+          "options": 3
+        }
+      ],
+      "existing_pages": []
+    },
+    "careers": {
+      "label": "Careers",
+      "description": "Manage careers page",
+      "endpoints": {
+        "index": "/admin/careers",
+        "create": "/admin/careers/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "primary_category_id",
+          "type": "select"
+        },
+        {
+          "name": "category_id",
+          "type": "select"
+        },
+        {
+          "name": "department",
+          "type": "text"
+        },
+        {
+          "name": "position",
+          "type": "text"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ],
+      "existing_pages": []
+    },
+    "calendar": {
+      "label": "Events Calendar",
+      "description": "Manage calendar of events",
+      "endpoints": {
+        "index": "/admin/calendar",
+        "create": "/admin/calendar/create"
+      },
+      "import_supported": true,
+      "import_sections": null,
+      "page_level_fields": [
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "h2",
+          "type": "text"
+        },
+        {
+          "name": "slug",
+          "type": "text"
+        },
+        {
+          "name": "start_date",
+          "type": "text"
+        },
+        {
+          "name": "end_date",
+          "type": "text"
+        },
+        {
+          "name": "noenddate",
+          "type": "checkbox"
+        },
+        {
+          "name": "event_start_time",
+          "type": "text"
+        },
+        {
+          "name": "event_end_time",
+          "type": "text"
+        },
+        {
+          "name": "recurrence type",
+          "type": "radio"
+        },
+        {
+          "name": "descr_short",
+          "type": "textarea"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_title",
+          "type": "text"
+        },
+        {
+          "name": "meta_desc",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_keywords",
+          "type": "textarea"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "categories",
+          "type": "checkbox"
+        },
+        {
+          "name": "link",
+          "type": "text"
+        },
+        {
+          "name": "link_title",
+          "type": "text"
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "publishing status",
+          "type": "select",
+          "options": 3
+        }
+      ],
+      "note": "87 total fields on create page including recurrence and scheduling"
+    },
+    "content": {
+      "label": "Pages",
+      "description": "Manage content for all pages on your website from header to footer",
+      "endpoints": {
+        "index": "/admin/content",
+        "create": "/admin/content/create"
+      },
+      "import_supported": true,
+      "import_sections": null,
+      "note": "Create page only has globalSearch field. Pages are pre-built and edited, not created from scratch.",
+      "existing_pages": []
+    },
+    "faq": {
+      "label": "Frequently Asked Questions",
+      "description": "Manage content for FAQ pages",
+      "endpoints": {
+        "index": "/admin/faq",
+        "create": "/admin/faq/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "question",
+          "type": "text"
+        },
+        {
+          "name": "category_id",
+          "type": "select"
+        },
+        {
+          "name": "slug",
+          "type": "text"
+        },
+        {
+          "name": "answer",
+          "type": "textarea"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ],
+      "existing_pages": []
+    },
+    "featured": {
+      "label": "Promo Tiles",
+      "description": "Create sections to display promos/special offers on your web pages",
+      "endpoints": {
+        "index": "/admin/featured",
+        "create": "/admin/featured/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "tile_name",
+          "type": "text"
+        },
+        {
+          "name": "position",
+          "type": "radio"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "price",
+          "type": "text"
+        },
+        {
+          "name": "lasttext",
+          "type": "text"
+        },
+        {
+          "name": "link",
+          "type": "text"
+        },
+        {
+          "name": "link_title",
+          "type": "text"
+        },
+        {
+          "name": "countdown countdown_end date_time",
+          "type": "text"
+        },
+        {
+          "name": "countdown countdown_end time_zone",
+          "type": "select"
+        },
+        {
+          "name": "countdown countdown_overlay",
+          "type": "checkbox"
+        },
+        {
+          "name": "countdown countdown_overlay_class",
+          "type": "select"
+        },
+        {
+          "name": "countdown countdown_image image_id",
+          "type": "text"
+        },
+        {
+          "name": "countdown countdown_link",
+          "type": "text"
+        },
+        {
+          "name": "countdown countdown_link_title",
+          "type": "text"
+        },
+        {
+          "name": "rfrequency",
+          "type": "text"
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "versions",
+          "type": "radio"
+        },
+        {
+          "name": "publishing status",
+          "type": "select"
+        }
+      ],
+      "existing_pages": []
+    },
+    "forms": {
+      "label": "Forms",
+      "description": "Create forms to collect information from users and view stored form submissions",
+      "endpoints": {
+        "index": "/admin/forms",
+        "create": "/admin/forms/create",
+        "available": "/admin/forms/available",
+        "submissions": "/admin/forms/submissions"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "success_message",
+          "type": "textarea"
+        },
+        {
+          "name": "settings is_spamcheck",
+          "type": "radio"
+        },
+        {
+          "name": "settings enable_honeypot",
+          "type": "radio"
+        },
+        {
+          "name": "success_page",
+          "type": "text"
+        },
+        {
+          "name": "settings push_to_zendesk",
+          "type": "radio"
+        }
+      ],
+      "existing_forms": [
+        {
+          "id": 5,
+          "name": "Contact"
+        },
+        {
+          "id": 6,
+          "name": "Stay Connected"
+        }
+      ]
+    },
+    "gallery": {
+      "label": "Gallery",
+      "description": "Upload images to gallery to be used across modules",
+      "endpoints": {
+        "index": "/admin/gallery",
+        "create": "/admin/gallery/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "slug",
+          "type": "text"
+        },
+        {
+          "name": "description",
+          "type": "textarea"
+        },
+        {
+          "name": "desktop",
+          "type": "checkbox"
+        },
+        {
+          "name": "mobile",
+          "type": "checkbox"
+        },
+        {
+          "name": "tablet",
+          "type": "checkbox"
+        },
+        {
+          "name": "featured",
+          "type": "checkbox"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ]
+    },
+    "ipool": {
+      "label": "Images (Image Pool)",
+      "description": "Manage images that can be used across modules",
+      "endpoints": {
+        "index": "/admin/ipool",
+        "thumbnails": "/admin/ipool/thumbnails"
+      },
+      "note": "Image management module - no create form, images uploaded via UI"
+    },
+    "lightboxes": {
+      "label": "Lightboxes",
+      "description": "Popup/lightbox content management",
+      "endpoints": {
+        "index": "/admin/lightboxes",
+        "create": "/admin/lightboxes/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "theme",
+          "type": "select"
+        },
+        {
+          "name": "header",
+          "type": "text"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "link",
+          "type": "text"
+        },
+        {
+          "name": "link_title",
+          "type": "text"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "publishing status",
+          "type": "select",
+          "options": 3
+        },
+        {
+          "name": "popup_frequency",
+          "type": "select",
+          "options": 5
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "pages",
+          "type": "hidden"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ]
+    },
+    "menushowcase": {
+      "label": "Menu Showcase",
+      "description": "Manage list of menus",
+      "endpoints": {
+        "index": "/admin/menushowcase",
+        "create": "/admin/menushowcase/create"
+      },
+      "import_supported": false,
+      "existing_pages": []
+    },
+    "poi": {
+      "label": "Points of Interest",
+      "description": "Manage points of interest",
+      "endpoints": {
+        "index": "/admin/poi",
+        "create": "/admin/poi/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "categories",
+          "type": "select",
+          "options": 7
+        },
+        {
+          "name": "link",
+          "type": "text"
+        },
+        {
+          "name": "url_name",
+          "type": "text"
+        },
+        {
+          "name": "address",
+          "type": "text"
+        },
+        {
+          "name": "phone",
+          "type": "text"
+        },
+        {
+          "name": "distance",
+          "type": "text"
+        },
+        {
+          "name": "duration",
+          "type": "text"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        },
+        {
+          "name": "unitOfMeasure",
+          "type": "hidden"
+        },
+        {
+          "name": "lat",
+          "type": "hidden"
+        },
+        {
+          "name": "lng",
+          "type": "hidden"
+        },
+        {
+          "name": "ordering",
+          "type": "hidden"
+        }
+      ],
+      "existing_pages": []
+    },
+    "pressroom": {
+      "label": "Press Room",
+      "description": "Press releases and media content",
+      "endpoints": {
+        "index": "/admin/pressroom",
+        "create": "/admin/pressroom/create"
+      },
+      "import_supported": false,
+      "page_level_fields": [
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "slug",
+          "type": "text"
+        },
+        {
+          "name": "date",
+          "type": "text"
+        },
+        {
+          "name": "category_id",
+          "type": "select",
+          "options": 5
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "filename",
+          "type": "hidden"
+        },
+        {
+          "name": "meta_title",
+          "type": "text"
+        },
+        {
+          "name": "meta_desc",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_keywords",
+          "type": "textarea"
+        },
+        {
+          "name": "omniture",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_robots",
+          "type": "select",
+          "options": 4
+        },
+        {
+          "name": "hidden_from_sitemap",
+          "type": "checkbox"
+        },
+        {
+          "name": "meta_canonical_landing",
+          "type": "select"
+        },
+        {
+          "name": "schema",
+          "type": "textarea"
+        },
+        {
+          "name": "tags",
+          "type": "select"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "secondary_thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "use_inherit_ti",
+          "type": "radio"
+        },
+        {
+          "name": "link",
+          "type": "text"
+        },
+        {
+          "name": "link_title",
+          "type": "text"
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "publishing status",
+          "type": "select",
+          "options": 3
+        }
+      ],
+      "existing_pages": []
+    },
+    "rooms": {
+      "label": "Rooms Showcase",
+      "description": "Manage list of rooms",
+      "endpoints": {
+        "index": "/admin/rooms",
+        "create": "/admin/rooms/create",
+        "categories": "/admin/rooms (Categories sub-nav)",
+        "room_types": "/admin/rooms (Room Types sub-nav)",
+        "page_attributes": "/admin/rooms (Page Attributes sub-nav)"
+      },
+      "import_supported": true,
+      "import_sections": null,
+      "page_level_fields": [
+        {
+          "name": "categories",
+          "type": "checkbox",
+          "values": [
+            "Rooms",
+            "Suites",
+            "Accessible"
+          ]
+        },
+        {
+          "name": "type_id",
+          "type": "select",
+          "options": [
+            "Rooms"
+          ]
+        },
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "h1",
+          "type": "text"
+        },
+        {
+          "name": "h2",
+          "type": "text"
+        },
+        {
+          "name": "slug",
+          "type": "text"
+        },
+        {
+          "name": "roomcode",
+          "type": "text"
+        },
+        {
+          "name": "descr_short",
+          "type": "textarea"
+        },
+        {
+          "name": "filename",
+          "type": "hidden",
+          "note": "hero image"
+        },
+        {
+          "name": "floor_image image_id",
+          "type": "text"
+        },
+        {
+          "name": "descr",
+          "type": "textarea"
+        },
+        {
+          "name": "features",
+          "type": "checkbox",
+          "note": "Multiple feature checkboxes by ID"
+        },
+        {
+          "name": "meta_title",
+          "type": "text"
+        },
+        {
+          "name": "meta_desc",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_keywords",
+          "type": "textarea"
+        },
+        {
+          "name": "omniture",
+          "type": "textarea"
+        },
+        {
+          "name": "meta_robots",
+          "type": "select",
+          "options": 4
+        },
+        {
+          "name": "hidden_from_sitemap",
+          "type": "checkbox"
+        },
+        {
+          "name": "meta_canonical_landing",
+          "type": "select"
+        },
+        {
+          "name": "schema",
+          "type": "textarea"
+        },
+        {
+          "name": "tags",
+          "type": "select"
+        },
+        {
+          "name": "thumbnail image_id",
+          "type": "text"
+        },
+        {
+          "name": "use_inherit_ti",
+          "type": "radio"
+        },
+        {
+          "name": "gallery",
+          "type": "sortable_images",
+          "note": "Multiple gallery images with image_id, caption, url, cropping"
+        },
+        {
+          "name": "extlink",
+          "type": "text",
+          "note": "Booking link desktop"
+        },
+        {
+          "name": "extlinkmob",
+          "type": "text",
+          "note": "Booking link mobile"
+        },
+        {
+          "name": "link",
+          "type": "text",
+          "note": "Internal page link"
+        },
+        {
+          "name": "link_title",
+          "type": "text"
+        },
+        {
+          "name": "linkmob",
+          "type": "text"
+        },
+        {
+          "name": "linkmob_title",
+          "type": "text"
+        },
+        {
+          "name": "price_link",
+          "type": "text"
+        },
+        {
+          "name": "layout",
+          "type": "select",
+          "options": [
+            "Default",
+            "Template 1-1",
+            "Template 1-2"
+          ]
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ],
+      "existing_pages": []
+    },
+    "specials": {
+      "label": "Special Offers",
+      "description": "Create special offers to display promotions on your website",
+      "endpoints": {
+        "index": "/admin/specials",
+        "create": "/admin/specials/create"
+      },
+      "import_supported": true,
+      "import_sections": null,
+      "existing_pages": []
+    },
+    "venues": {
+      "label": "Venues Showcase",
+      "description": "Manage list of venues",
+      "endpoints": {
+        "index": "/admin/venues",
+        "create": "/admin/venues/create"
+      },
+      "import_supported": true,
+      "import_sections": null,
+      "existing_pages": []
+    },
+    "spe": {
+      "label": "Content Personalization",
+      "description": "Create target audiences to personalize content based on behaviors and user criteria",
+      "endpoints": {
+        "index": "/admin/spe",
+        "create": "/admin/spe/create"
+      },
+      "page_level_fields": [
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "description",
+          "type": "textarea"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ]
+    },
+    "pdf": {
+      "label": "Documents",
+      "description": "Upload and store documents",
+      "endpoints": {
+        "index": "/admin/pdf"
+      },
+      "note": "Document upload module, JS-rendered table"
+    },
+    "tags": {
+      "label": "Scripts (formerly Tags)",
+      "description": "JS Scripts, Google Scripts, etc.",
+      "endpoints": {
+        "index": "/admin/tags",
+        "create": "/admin/tags/create"
+      },
+      "page_level_fields": [
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "description",
+          "type": "textarea"
+        },
+        {
+          "name": "global",
+          "type": "checkbox"
+        },
+        {
+          "name": "placement",
+          "type": "select",
+          "options": 3
+        },
+        {
+          "name": "consent_level",
+          "type": "select",
+          "options": 4
+        },
+        {
+          "name": "content",
+          "type": "textarea"
+        },
+        {
+          "name": "gtm_id",
+          "type": "text"
+        },
+        {
+          "name": "speRuleIds",
+          "type": "select"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ]
+    },
+    "sefurl": {
+      "label": "URL Management",
+      "description": "Create external links for your website",
+      "endpoints": {
+        "index": "/admin/sefurl",
+        "create": "/admin/sefurl/create"
+      },
+      "page_level_fields": [
+        {
+          "name": "requestpath",
+          "type": "text"
+        },
+        {
+          "name": "is_regex",
+          "type": "checkbox"
+        },
+        {
+          "name": "targetpath",
+          "type": "text"
+        },
+        {
+          "name": "published",
+          "type": "checkbox"
+        }
+      ]
+    },
+    "channel": {
+      "label": "ACM (Advanced Content Manager)",
+      "description": "Create specialized content templates / section templates",
+      "endpoints": {
+        "index": "/admin/channel",
+        "create": "/admin/channel/create",
+        "import": "/admin/channel/import"
+      },
+      "note": "This is the section template manager. Sections created here are available to modules with import support."
+    }
+  },
+  "admin_modules": {
+    "settings": {
+      "label": "Settings",
+      "endpoint": "/admin/settings",
+      "fields": 18,
+      "note": "Site-wide settings including hero image, meta thumbnail, inherit settings"
+    },
+    "history": {
+      "label": "Activity Log",
+      "endpoint": "/admin/history",
+      "description": "View user activity within CMS"
+    },
+    "searchhistory": {
+      "label": "Search History",
+      "endpoint": "/admin/searchhistory",
+      "description": "View search history on website"
+    },
+    "system": {
+      "label": "System Pages",
+      "endpoint": "/admin/system",
+      "description": "Admin system pages for the CMS",
+      "pages": [
+        {
+          "id": 64,
+          "name": "Password Protected Pages - Login",
+          "type": "system"
+        },
+        {
+          "id": 65,
+          "name": "Password Protected Pages - Forbidden",
+          "type": "system"
+        },
+        {
+          "id": 6,
+          "name": "Reservations - Checkout",
+          "type": "reservations"
+        },
+        {
+          "id": 7,
+          "name": "Reservations - Confirmation",
+          "type": "reservations"
+        },
+        {
+          "id": 8,
+          "name": "Reservations - Reservation",
+          "type": "reservations"
+        },
+        {
+          "id": 9,
+          "name": "Reservations - Modify",
+          "type": "reservations"
+        },
+        {
+          "id": 10,
+          "name": "Reservations - RoomStay",
+          "type": "reservations"
+        },
+        {
+          "id": 11,
+          "name": "Search",
+          "type": "search"
+        },
+        {
+          "id": 12,
+          "name": "Advanced Search",
+          "type": "search"
+        },
+        {
+          "id": 5,
+          "name": "Reservations",
+          "type": "reservations"
+        },
+        {
+          "id": 4,
+          "name": "404",
+          "type": "system"
+        }
+      ]
+    },
+    "user": {
+      "label": "Users",
+      "endpoint": "/admin/user",
+      "description": "Manage CMS users and permissions",
+      "fields": [
+        {
+          "name": "fullname",
+          "type": "text"
+        },
+        {
+          "name": "login",
+          "type": "text"
+        },
+        {
+          "name": "pass",
+          "type": "password"
+        },
+        {
+          "name": "pass2",
+          "type": "password"
+        },
+        {
+          "name": "email",
+          "type": "text"
+        },
+        {
+          "name": "properties su",
+          "type": "checkbox"
+        },
+        {
+          "name": "notify users",
+          "type": "select",
+          "options": 18
+        },
+        {
+          "name": "notify additionalemails",
+          "type": "text"
+        }
+      ]
+    },
+    "versions": {
+      "label": "Versions",
+      "endpoint": "/admin/versions",
+      "description": "Manage content drafts, approve, etc."
+    }
+  },
+  "_note": "Default Cendyn CMS reference (v.11.4), derived from a demo site and cross-checked against one production site. Copy this folder to content-jobs/<site>/ and verify per site. import_sections ids are per site: fill from the site's Import button."
+}
