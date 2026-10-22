@@ -4,3 +4,4 @@ profiles/
 *.csv
 !skills/migration-log/templates/site-folder/migration-log.csv
 auth.json
+admin/
