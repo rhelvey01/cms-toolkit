@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CMS Toolkit
 
 Four Claude skills for discovering, moving and recording content in a Cendyn CMS, for any page type (rooms, offers, venues, events, blog, galleries, sections…).
@@ -42,3 +43,7 @@ content-jobs/
 Every skill opens `content-jobs/<site>/` first, then falls back to the base Cendyn profile in `skills/cendyn-discovery/references/defaults/`.
 
 `.gitignore` blocks logs, CSVs and `auth.json`. Task writing and Playwright checks are a separate plugin: `task-builder`.
+=======
+# cms-toolkit
+CMS skills and workflows to discover, migration and build pages
+>>>>>>> 087b51780422ad1a7a85bc64afa70bb55b5ad97d
