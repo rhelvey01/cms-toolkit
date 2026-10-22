@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "cms-toolkit",
+      "name": "Randy Helvey",
       "source": "./",
       "description": "Discover, extract, build and log migrations in any Cendyn CMS module. Four skills: cendyn-discovery, cendyn-copy, cendyn-page-builder, migration-log.",
       "version": "0.3.0"
