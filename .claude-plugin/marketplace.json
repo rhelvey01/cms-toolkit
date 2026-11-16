@@ -7,8 +7,8 @@
     {
       "name": "Randy Helvey",
       "source": "./",
-      "description": "Discover, extract, build and log migrations in any Cendyn CMS module. Four skills: cendyn-discovery, cendyn-copy, cendyn-page-builder, migration-log.",
-      "version": "0.3.0"
+      "description": "Discover, extract, build and log migrations in any Cendyn CMS module. Six skills: cendyn-discovery, cendyn-copy, cendyn-page-builder, migration-log, photo-prep, skill-upgrader. Includes an oversized-image guard hook.",
+      "version": "0.5.0"
     }
   ]
 }

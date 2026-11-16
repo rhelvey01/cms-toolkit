@@ -79,6 +79,11 @@ broken hero.
 
 ## Images
 
+**Never open original photos.** Claude errors on images that are too big. Before
+uploading or looking at any photo, run `photo-prep`: upload from its `upload-ready/`
+folder, and view only its `_previews/` files or contact sheets. If the image-read hook
+blocks a file, follow its message instead of retrying.
+
 The default strategy (no contact sheet) is the lowest ids first from the page's folder.
 That's **structurally correct and aesthetically arbitrary**. Say so in the report and
 don't present the choices as curated. If a contact sheet or classifier output is

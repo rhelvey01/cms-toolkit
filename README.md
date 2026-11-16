@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # CMS Toolkit
 
-Four Claude skills for discovering, moving and recording content in a Cendyn CMS, for any page type (rooms, offers, venues, events, blog, galleries, sections…).
+Six Claude skills for discovering, moving and recording content in a Cendyn CMS, prepping photos, and improving the skills themselves, for any page type (rooms, offers, venues, events, blog, galleries, sections…).
 
 | Skill | Does | Touches the CMS? |
 |---|---|---|
@@ -9,6 +8,8 @@ Four Claude skills for discovering, moving and recording content in a Cendyn CMS
 | `cendyn-copy` | Extracts source copy into `content.json`, every field tagged verbatim / derived / authored | no |
 | `cendyn-page-builder` | Creates pages from a profile + `content.json`: create → import sections → fill → save → verify. Also places and updates photo galleries (see "Widgets and galleries" in its SKILL.md) | yes (writes) |
 | `migration-log` | Appends rows to the site's single living CSV record after every job | no |
+| `photo-prep` | Fixes oversized photos (under 20 MB, max 5500 px), makes safe previews, and QA's client photo deliveries | no |
+| `skill-upgrader` | Mines `migration-log.csv` files for recurring problems and proposes evidence-cited skill fixes; nothing changes without approval | no |
 
 ```
 source pages ──► cendyn-copy ──► content.json
@@ -25,6 +26,8 @@ content.json + profile ──► cendyn-page-builder ──► pages in the CMS 
 - `skills/cendyn-discovery/references/examples/`: anonymised worked example (rooms page type)
 - `skills/cendyn-copy/references/example-rooms.content.json`: synthetic content showing the provenance tags
 - `skills/migration-log/templates/site-folder/`: blank site folder (instructions.md, mapping.json, migration-log.csv)
+- `skills/skill-upgrader/scripts/mine_logs.py`: deterministic log miner (no LLM, no network)
+- `hooks/`: PreToolUse guard that stops Claude opening oversized images
 
 ## Defaults here, differences outside
 
@@ -43,7 +46,3 @@ content-jobs/
 Every skill opens `content-jobs/<site>/` first, then falls back to the base Cendyn profile in `skills/cendyn-discovery/references/defaults/`.
 
 `.gitignore` blocks logs, CSVs and `auth.json`. Task writing and Playwright checks are a separate plugin: `task-builder`.
-=======
-# cms-toolkit
-CMS skills and workflows to discover, migration and build pages
->>>>>>> 087b51780422ad1a7a85bc64afa70bb55b5ad97d

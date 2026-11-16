@@ -1,0 +1,17 @@
+{
+  "description": "Blocks Claude from opening full-size images (which errors out) and points it to photo-prep instead.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${CLAUDE_PLUGIN_ROOT}/hooks/block-large-images.ps1\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
